@@ -20,7 +20,6 @@ def strict_str2bool(v):
 
 parser = argparse.ArgumentParser(description="Process file paths and device for GeneFormer embedding.")
 
-# 添加参数
 parser.add_argument('--open_path', type=str, default='/home/zhoumurong/GeneFormer_code/Embedding/data/in/',
                     help='Path to the input data directory.')
 parser.add_argument('--save_path', type=str,
@@ -40,10 +39,8 @@ parser.add_argument("--trunc_num", type=int, default=2048, help=" trunc the max 
 parser.add_argument("--batch_size", type=int, default=8, help=" the inference batch group number")
 
 
-# 解析命令行参数
 args = parser.parse_args()
 
-# 打印或使用参数
 print("Open path:", args.open_path)
 print("Save path:", args.save_path)
 print("Save path for embeddings:", args.save_path_embedding)
@@ -64,30 +61,20 @@ open_path_conference_data =  args.open_path_conference_data
 device_choose = args.device_choose
 re_load = args.re_load
 
-# 检查并创建路径
 os.makedirs(save_path, exist_ok=True)
 os.makedirs(save_path_embedding, exist_ok=True)
 
-print(f"路径 {save_path} 和 {save_path_embedding} 已经创建或存在。")
 
-
-
-# 使用 os.path 来获取文件名（不含后缀）
 file_name = os.listdir(open_path)[0]
 
-file_prefix = os.path.splitext(file_name)[0]# 获取文件名不含后缀
+file_prefix = os.path.splitext(file_name)[0]
 
 
 if not re_load:
 
     tk = TranscriptomeTokenizer(nproc=1,norm_read=True,trunc_num =args.trunc_num)
 
-    # tokenized_dataset,tokenized_cells, cell_metadata = tk.tokenize_data(open_path,
-    #                  save_path,
-    #                  file_prefix,
-    #                  file_format="h5ad")
-
-
+ 
     tokenized_cells, cell_metadata = tk.tokenize_data_mid(open_path,
                      file_format="h5ad")
 
@@ -99,8 +86,6 @@ if not re_load:
                      save_path,
                      file_prefix)
 
-    ##查看tokenized_dataset数据结构
-    # 查看 tokenized_dataset 数据结构
     if tokenized_dataset is not None:
         df_sample = tokenized_dataset.select(list(range(100))).to_pandas()
         print(df_sample.head())
