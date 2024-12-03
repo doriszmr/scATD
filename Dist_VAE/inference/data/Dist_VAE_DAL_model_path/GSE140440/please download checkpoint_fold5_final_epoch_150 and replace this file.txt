@@ -1,1 +1,1 @@
-checkpoint_fold5_final_epoch_150.pth can download from 
+checkpoint_fold5_final_epoch_150.pth can download from figshare (https://figshare.com/account/articles/27908847) Github_test_example/GSE140440_Dist_VAE_inference_model
