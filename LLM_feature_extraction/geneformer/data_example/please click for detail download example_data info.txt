@@ -1,1 +1,1 @@
-GSE112274.h5ad can download from figshare (https://figshare.com/account/articles/27908847) Github_test_example path
+GSE112274.h5ad can download from figshare (https://figshare.com/articles/software/scATD/27908847) Github_test_example path
