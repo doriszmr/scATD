@@ -1,1 +1,1 @@
-ALL_Bulk_Dell.h5ad, preprocessed_all_ALL_Bulk_Dell.h5ad and preprocessed_GSE149214.h5ad can download from figshare (https://figshare.com/account/articles/27908847) Github_test_example
+ALL_Bulk_Dell.h5ad, preprocessed_all_ALL_Bulk_Dell.h5ad and preprocessed_GSE149214.h5ad can download from figshare (https://figshare.com/articles/software/scATD/27908847) Github_test_example
