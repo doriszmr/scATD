@@ -1,1 +1,1 @@
-scFoundation-main.zip can download from 
+scFoundation-main.zip can download from figshare (https://figshare.com/account/articles/27908847) Github_test_example
