@@ -1,6 +1,6 @@
 # scATD: A De Novo Adaptive Transfer and Distillation Framework Based on LLM for single-cell Drug Sensitivity Prediction and Biomarker Identification
 
-## Introduction
+## 1.Introduction
 
 ### Author Contact Information:
 
@@ -10,11 +10,11 @@
 
 Your contributions, feedback, and suggestions are highly appreciated. If you encounter any issues or have questions, feel free to reach out to the authors via the provided email addresses. Thank you for your interest in our work!
 
-## Dataset Available
+## 2.Dataset Available
 
 All Data can be download in figshare (https://figshare.com/articles/software/scATD/27908847).
 
-## scATD Environment Setup
+## 3.scATD Environment Setup
 
 For the environment configuration for feature extraction using scFoundation or geneformer, please refer to the configuration in the 'Feature Extraction from LLM' section.
 
@@ -45,7 +45,7 @@ For more detailed installation instructions and troubleshooting, please refer to
 
 
 
-## Data Preprocessing and Feature Extraction from LLM 
+## 4.Data Preprocessing and Feature Extraction from LLM 
 
 ### scFoundation 
 
@@ -180,19 +180,19 @@ Additionally, both VAE_sf and VAE_gf fundamentally accept feature matrices extra
 
 
 
-## Res_VAE Pretraining
+## 5.Res_VAE Pretraining
 
 ```
 We are currently undergoing peer review, so the code related to this part has not been made available. Please contact the author if needed.
 ```
 
-## Distillation VAE  Pretraining
+## 6.Distillation VAE  Pretraining
 
 ```
 We are currently undergoing peer review, so the code related to this part has not been made available. Please contact the author if needed.
 ```
 
-## Transfer Learning and Model Inference 
+## 7.Transfer Learning and Model Inference 
 
 ### VAE_sf transfer learning and inference
 
@@ -250,30 +250,30 @@ python ./Dist_VAE/inference/code/Dist_VAE_inference.py --open_path ./Dist_VAE/in
 
 
 
-## Key Feature or Gene Identification 
+## 8.Key Feature or Gene Identification 
 
 ```
 We are currently undergoing peer review, so the code related to this part has not been made available. Please contact the author if needed.
 ```
 
-## Comparison Experiments with Other Models
+## 9.Comparison Experiments with Other Models
 
 ```
 We are currently undergoing peer review, so the code related to this part has not been made available. Please contact the author if needed.
 ```
 
 
-## Reference
+## 10.Reference
 
 Hao M, Gong J, Zeng X, et al. Large-scale foundation model on single-cell transcriptomics [J]. Nature Methods, 2024.
 
 Theodoris C V, Xiao L, Chopra A, et al. Transfer learning enables predictions in network biology [J]. Nature, 2023, 618(7965): 616-24.
 
-## Citation
+## 11.Citation
 
 
 
-## Acknowledgments
+## 12.Acknowledgments
 
 We are acknowledge the contributions of the open-source community and the developers of the Python libraries used in this study.
 
