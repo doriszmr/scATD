@@ -256,7 +256,7 @@ We are currently undergoing peer review, so the code related to this part has no
 
 ## Comparison Experiments with Other Models
 
-```
+```bash
 We are currently undergoing peer review, so the code related to this part has not been made available. Please contact the author if needed.
 ```
 
