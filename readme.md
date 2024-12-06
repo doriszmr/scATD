@@ -252,12 +252,13 @@ python ./Dist_VAE/inference/code/Dist_VAE_inference.py --open_path ./Dist_VAE/in
 
 ## Key Feature or Gene Identification 
 
-
+We are currently undergoing peer review, so the code related to this part has not been made available. Please contact the author if needed.
 
 ## Comparison Experiments with Other Models
 
-We have provided the configuration details of other benchmark models in the supplementary materials of our paper.
-
+```
+We are currently undergoing peer review, so the code related to this part has not been made available. Please contact the author if needed.
+```
 
 
 ## Reference
