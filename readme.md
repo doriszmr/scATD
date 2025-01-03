@@ -277,3 +277,6 @@ Theodoris C V, Xiao L, Chopra A, et al. Transfer learning enables predictions in
 
 We are acknowledge the contributions of the open-source community and the developers of the Python libraries used in this study.
 
+## Related Works
+If you are interested in feature extraction and model interpretation for large language models, you may find our previous work helpful:
+- **Interpretable feature extraction and dimensionality reduction in ESM2 for protein localization prediction**: [GitHub Repository](https://github.com/yujuan-zhang/feature-representation-for-LLMs)
