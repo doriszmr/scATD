@@ -180,7 +180,7 @@ Additionally, both VAE_sf and VAE_gf fundamentally accept feature matrices extra
 
 
 
-## Res_VAE Pretraining
+## Res_VAE Pretraining (pretraining in Panglao data)
 
 ### Step1 VAE_sf hyperparameter optimization
 
