@@ -191,11 +191,12 @@ Additionally, both VAE_sf and VAE_gf fundamentally accept feature matrices extra
 Execute the following script to train the model and output the optimal hyperparameter configuration file (best_hyperparameters.xlsx):
 
 ```bash
-python ./Res_VAE_pretraining/skf_pretraining/code/VAE_sf_Res-VAE_hyperparam_pretraining.py \
-    --open_path ./data/ \                     # Path to input features (.npy)
-    --save_path_outer ./Res_VAE_retraining_after_hyperparameter/output \  # Output directory
-    --file_prefix scRNA-seq_panglao \  # File naming prefix
+python ./Res_VAE_pretraining/skf_pretraining/code/VAE_sf_Res-VAE_hyperparam_pretraining.py 
 ```
+    --open_path ./data/ \                     # Path to input features (.npy),Parameter passing is unsupported; modify directly in the script.
+    --save_path_outer ./Res_VAE_retraining_after_hyperparameter/output \  # Output directory,Parameter passing is unsupported; modify directly in the script.
+    --file_prefix scRNA-seq_panglao \  # File naming prefix,Parameter passing is unsupported; modify directly in the script.
+
 
 ###  Step2 VAE_sf Pretraining after hyperparameter optimization
 
@@ -214,7 +215,7 @@ python ./Res_VAE_pretraining/pretraining_after_hyperparameter/code/VAE_sf_Res-VA
     --epoch_start_for_loss_plot_only 1 \      # Start epoch for loss visualization
     --batch_size 128 \                        # Training batch size
     --REC_beta 1500 \                         # Reconstruction loss weight (β)
-    --VAE_sf_best_hyperparameters.xlsx        # hyperparameter file name
+    --best_parameter_name VAE_sf_best_hyperparameters.xlsx        # hyperparameter file name
 ```
 
 ### VAE_gf hyperparameter optimization and Pretraining
@@ -223,11 +224,12 @@ For VAE_gf hyperparameter optimization and pretraining, you can follow a **simil
 Step1 VAE_gf hyperparameter optimization
 
 ```bash
-python ./Res_VAE_pretraining/skf_pretraining/code/VAE_gf_Res-VAE_hyperparam_pretraining.py \
-    --open_path ./data/ \                     # Path to input features (.npy)
-    --save_path_outer ./Res_VAE_retraining_after_hyperparameter/output \  # Output directory
-    --file_prefix scRNA-seq_panglao \  # File naming prefix
+python ./Res_VAE_pretraining/skf_pretraining/code/VAE_gf_Res-VAE_hyperparam_pretraining.py
 ```
+    --open_path ./data/ \                     # Path to input features (.npy),Parameter passing is unsupported; modify directly in the script.
+    --save_path_outer ./Res_VAE_retraining_after_hyperparameter/output \  # Output directory,Parameter passing is unsupported; modify directly in the script.
+    --file_prefix scRNA-seq_panglao \  # File naming prefix,Parameter passing is unsupported; modify directly in the script.
+
 Step2 VAE_gf Pretraining after hyperparameter optimization
 
 ```bash
@@ -239,7 +241,7 @@ python ./Res_VAE_pretraining/pretraining_after_hyperparameter/code/VAE_gf_Res-VA
     --epoch_start_for_loss_plot_only 1 \      # Start epoch for loss visualization
     --batch_size 128 \                        # Training batch size
     --REC_beta 10000 \                         # Reconstruction loss weight (β)
-    --VAE_gf_best_hyperparameters.xlsx        # hyperparameter file name
+    --best_parameter_name VAE_gf_best_hyperparameters.xlsx        # hyperparameter file name
 ```
 
 
