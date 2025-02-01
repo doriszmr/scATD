@@ -259,7 +259,10 @@ We are currently undergoing peer review, so the code related to this part has no
 ## Comparison Experiments with Other Models
 
 ```
-We are currently undergoing peer review, so the code related to this part has not been made available. Please contact the author if needed.
+IF YOU ARE NOT THE REVIEWER:
+We are currently undergoing peer review, so the experiment setting related to this part has not been made available. Please contact the author if needed.
+IF YOU ARE THE REVIEWER:
+Please see supplementary methods for details.
 ```
 
 
