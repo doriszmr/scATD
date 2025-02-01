@@ -13,7 +13,8 @@ Your contributions, feedback, and suggestions are highly appreciated. If you enc
 ## Dataset Available
 
 All Data can be download in figshare (https://figshare.com/articles/software/scATD/27908847).
-
+Additionally, the model checkpoints for VAE_sf, VAE_gf, and Dist_VAE, which were pretrained on Panglao data, are also available for download on figshare (https://figshare.com/articles/software/scATD/27908847).
+Finally, the transfer learning and drug resistance models can be trained by following the transfer learning instructions and code provided, and its backbone is the above pretrained VAE model.
 ## scATD Environment Setup
 
 For the environment configuration for feature extraction using scFoundation or geneformer, please refer to the configuration in the 'Feature Extraction from LLM' section.
