@@ -183,7 +183,7 @@ Additionally, both VAE_sf and VAE_gf fundamentally accept feature matrices extra
 
 ## Res_VAE Pretraining (pretraining in Panglao data)
 
-### Step1 VAE_sf hyperparameter optimization
+Step1 VAE_sf hyperparameter optimization
 
 1. **Prepare Input Data**
    -  Place the scFoundation model-derived feature data (`.npy` files) generated from previous steps into the **user-specified directory**:
@@ -199,7 +199,7 @@ python ./Res_VAE_pretraining/skf_pretraining/code/VAE_sf_Res-VAE_hyperparam_pret
     --file_prefix scRNA-seq_panglao \  # File naming prefix,Parameter passing is unsupported; modify directly in the script.
 
 
-###  Step2 VAE_sf Pretraining after hyperparameter optimization
+Step2 VAE_sf Pretraining after hyperparameter optimization
 
 1. **Prepare Input Data**
    -  Place the scFoundation model-derived feature data (`.npy` files) generated from previous steps into the **user-specified directory**:
