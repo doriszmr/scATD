@@ -194,9 +194,9 @@ Execute the following script to train the model and output the optimal hyperpara
 ```bash
 python ./Res_VAE_pretraining/skf_pretraining/code/VAE_sf_Res-VAE_hyperparam_pretraining.py 
 ```
-    --open_path ./data/ \                     # Path to input features (.npy),Parameter passing is unsupported; modify directly in the script.
-    --save_path_outer ./Res_VAE_retraining_after_hyperparameter/output \  # Output directory,Parameter passing is unsupported; modify directly in the script.
-    --file_prefix scRNA-seq_panglao \  # File naming prefix,Parameter passing is unsupported; modify directly in the script.
+    --open_path ./data/ \                     # Path to input features (.npy),Parameter passing is unsupported; please modify directly in the script.
+    --save_path_outer ./Res_VAE_retraining_after_hyperparameter/output \  # Output directory,Parameter passing is unsupported; please modify directly in the script.
+    --file_prefix scRNA-seq_panglao \  # File naming prefix,Parameter passing is unsupported; please modify directly in the script.
 
 
 Step2 VAE_sf Pretraining after hyperparameter optimization
@@ -205,7 +205,7 @@ Step2 VAE_sf Pretraining after hyperparameter optimization
    -  Place the scFoundation model-derived feature data (`.npy` files) generated from previous steps into the **user-specified directory**:
 
 2. **Run 10-fold cross-validation for model pretraining**
-Execute the following script to train the model and output the model checkpoint file (default is using the last epoch fold 1 checkponit as final model for downstream task):
+Execute the following script to train the model and output the model checkpoint file (default is using the last epoch fold 1 checkponit as final model for downstream task, we have also provided pre-trained model checkpoints on Figshare):
 
 ```bash
 python ./Res_VAE_pretraining/pretraining_after_hyperparameter/code/VAE_sf_Res-VAEpretraining.py \
@@ -219,6 +219,7 @@ python ./Res_VAE_pretraining/pretraining_after_hyperparameter/code/VAE_sf_Res-VA
     --best_parameter_name VAE_sf_best_hyperparameters.xlsx        # hyperparameter file name
 ```
 
+
 ### VAE_gf hyperparameter optimization and Pretraining
 For VAE_gf hyperparameter optimization and pretraining, you can follow a **similar procedure to the VAE-sf** described above.
 
@@ -227,9 +228,9 @@ Step1 VAE_gf hyperparameter optimization
 ```bash
 python ./Res_VAE_pretraining/skf_pretraining/code/VAE_gf_Res-VAE_hyperparam_pretraining.py
 ```
-    --open_path ./data/ \                     # Path to input features (.npy),Parameter passing is unsupported; modify directly in the script.
-    --save_path_outer ./Res_VAE_retraining_after_hyperparameter/output \  # Output directory,Parameter passing is unsupported; modify directly in the script.
-    --file_prefix scRNA-seq_panglao \  # File naming prefix,Parameter passing is unsupported; modify directly in the script.
+    --open_path ./data/ \                     # Path to input features (.npy),Parameter passing is unsupported; please modify directly in the script.
+    --save_path_outer ./Res_VAE_retraining_after_hyperparameter/output \  # Output directory,Parameter passing is unsupported; please modify directly in the script.
+    --file_prefix scRNA-seq_panglao \  # File naming prefix,Parameter passing is unsupported; please modify directly in the script.
 
 Step2 VAE_gf Pretraining after hyperparameter optimization
 
@@ -244,7 +245,7 @@ python ./Res_VAE_pretraining/pretraining_after_hyperparameter/code/VAE_gf_Res-VA
     --REC_beta 10000 \                         # Reconstruction loss weight (β)
     --best_parameter_name VAE_gf_best_hyperparameters.xlsx        # hyperparameter file name
 ```
-
+Besides, default is using the last epoch fold 1 checkponit as final model for downstream task, we have also provided pre-trained model checkpoints on Figshare
 
 ## Distillation VAE  Pretraining
 
