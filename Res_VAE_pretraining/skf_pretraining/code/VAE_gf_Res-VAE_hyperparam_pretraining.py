@@ -36,10 +36,10 @@ def strict_str2bool(v):
     else:
         raise argparse.ArgumentTypeError('Only "True" or "False" are allowed.')
 
-# 创建ArgumentParser对象
+
 parser = argparse.ArgumentParser(description="VAE Pretraining")
 
-# 添加命令行参数
+
 parser.add_argument('--open_path', type=str, default='/home/luozeyu/desktop/VAE_pretraining/data/in',
                     help='Path to the input data')
 parser.add_argument('--save_path_outer', type=str,
@@ -63,14 +63,10 @@ parser.add_argument("--random_choose", type=strict_str2bool, default=True, help=
 parser.add_argument('--random_choose_num', type=float, default=0.3, help='')
 
 
-# 解析命令行参数
+
 args = parser.parse_args()
 
 
-# open_path = '/home/luozeyu/desktop/VAE_pretraining/data/in'
-# save_path_outer = '/home/luozeyu/desktop/VAE_pretraining/output/'
-#
-# file_prefix = 'scRNA-seq_panglao_0_1_Random_0_3'
 
 open_path = args.open_path
 save_path_outer = args.save_path_outer
@@ -81,11 +77,10 @@ device_choose = args.device_choose
 
 
 
-# 检查目录是否存在，如果不存在则创建
 if not os.path.exists(save_path):
     os.makedirs(save_path)
 
-random_choose_num = args.random_choose_num ##随机选取用于超参数筛选的数据比例
+random_choose_num = args.random_choose_num 
 
 
 filename = os.listdir(open_path)[0]
@@ -93,20 +88,15 @@ filename = os.listdir(open_path)[0]
 scRNAseq_matrix_original = np.load(os.path.join(open_path, filename))
 
 
-random_choose=args.random_choose  #是否进行超参数筛选
+random_choose=args.random_choose 
 
-##选择用于5折交叉验证的数据
 
-# 检查数据是否含有NaN
 print("DATA is containing NA?: ", np.isnan(scRNAseq_matrix_original).any())
 
 
-##不使用DBSCAN去离群值的情况
 scRNAseq_matrix = scRNAseq_matrix_original
 
 
-
-# 计算用于训练的随机索引
 if random_choose:
     num_samples = scRNAseq_matrix.shape[0]
     num_train_samples = int(num_samples * random_choose_num)  # 选择30%的数据作为训练集
