@@ -42,7 +42,7 @@ parser.add_argument('--label_mapping', type=str, default='{"tos": 0, "toR": 1}',
 parser.add_argument('--class_num', type=int, default=2, help='Number of classes.')
 parser.add_argument('--drug_label_choose', type=str, default='label', help='label of classes.')
 parser.add_argument('--seed_set', type=int, default=42, help='Number of random seed.')
-parser.add_argument('--AUC_threhold', type=float, default=0.5, help='learning rate')
+parser.add_argument('--AUC_threhold', type=float, default=0.5 )
 
 parser.add_argument("--inference_only", type=strict_str2bool, default=False, help="if only inference and not conduct evalution.")
 
