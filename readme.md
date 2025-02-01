@@ -246,7 +246,7 @@ python ./Dist_VAE/inference/code/Dist_VAE_inference.py --open_path ./Dist_VAE/in
 
 `--model_inference_parameters_file` **Dist_VAE inference model checkpoint**. Please refer to the model.txt file in this directory for instructions download the model checkpoint from figshare.
 
-`--inference_only:` if only inference and not conduct evaluation. set True only conduct model inference (model deploy mode),set False conduct both model inference and evaluation (model evaluation mode). Note, when set False, `--label_mapping:` must be specified, and a dataset with true labels (such as the example dataset) must be provided.
+`--inference_only:` if only inference and not conduct evaluation. set True only conduct model inference (model deploy mode),set False conduct both model inference and evaluation (model evaluation mode). Note, when set False, `--label_mapping` must be specified, and a dataset with true labels (such as the example dataset) must be provided.
 
 
 
