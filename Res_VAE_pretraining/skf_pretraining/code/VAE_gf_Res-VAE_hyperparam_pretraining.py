@@ -220,10 +220,6 @@ class ContinuousResidualVAE(nn.Module):
         super().__init__()
         # Encoder
 
-        # self.fc1 = nn.Linear(input_dim, hidden_dim_layer0)
-        # init.kaiming_normal_(self.fc1.weight, nonlinearity='leaky_relu')
-        # self.bn1 = nn.BatchNorm1d(hidden_dim_layer0)
-
         # Resblock
         self.Encoder_resblocks = nn.ModuleList()
 
@@ -231,12 +227,7 @@ class ContinuousResidualVAE(nn.Module):
             self.Encoder_resblocks.append(self.ResBlock(Encoder_layer_dims[i], Encoder_layer_dims[i + 1]))
 
         # # Latent space
-        # self.fc21 = nn.Linear(hidden_dim_layer_out_Z, z_dim)  # mu layer
-        # init.xavier_normal_(self.fc21.weight)  # Xavier Initialization for mu layer
-        # self.fc22 = nn.Linear(hidden_dim_layer_out_Z, z_dim)  # logvariance layer
-        # init.xavier_normal_(self.fc22.weight)  # Xavier Initialization for logvar layer
-
-        # 应用谱正则化和权重归一化
+       
         self.fc21 = spectral_norm(nn.Linear(hidden_dim_layer_out_Z, z_dim), n_power_iterations=5)  # mu layer
         init.xavier_normal_(self.fc21.weight_orig)
 
