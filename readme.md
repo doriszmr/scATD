@@ -183,6 +183,7 @@ Additionally, both VAE_sf and VAE_gf fundamentally accept feature matrices extra
 
 ## Res_VAE Pretraining (pretraining in Panglao data)
 
+### VAE_sf hyperparameter optimization and Pretraining
 Step1 VAE_sf hyperparameter optimization
 
 1. **Prepare Input Data**
@@ -247,7 +248,7 @@ python ./Res_VAE_pretraining/pretraining_after_hyperparameter/code/VAE_gf_Res-VA
 ```
 Besides, default is using the last epoch fold 1 checkponit as final model for downstream task, we have also provided pre-trained model checkpoints on Figshare
 
-## Distillation VAE  Pretraining
+## Distillation VAE Pretraining (pretraining in Panglao data)
 
 ```
 We are currently undergoing peer review, so the code related to this part has not been made available. Please contact the author if needed.
