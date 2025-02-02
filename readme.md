@@ -204,7 +204,7 @@ After executing the above code, users can obtain the optimal hyperparameter conf
 Step2 VAE_sf Pretraining after hyperparameter optimization
 
 1. **Prepare Input Data**
-   -  Place the scFoundation model-derived feature data (`.npy` files) generated from previous steps into the **user-specified directory**:
+   -  Place the scFoundation model-derived feature data (`.npy` files) generated from previous steps into the `--open_path`, detail for this data please follow below instruction.
 
 2. **Run 10-fold cross-validation for model pretraining**
 Execute the following script to train the model and output the model checkpoint file (default is using the last epoch fold 1 checkponit as final model for downstream task, we have also provided pre-trained model checkpoints on Figshare):
@@ -213,7 +213,7 @@ Execute the following script to train the model and output the model checkpoint 
 python ./Res_VAE_pretraining/pretraining_after_hyperparameter/code/VAE_sf_Res-VAEpretraining.py \
     --open_path ./data/ \                     # Path to input features (.npy)
     --save_path_outer ./Res_VAE_retraining_after_hyperparameter/output \  # Output directory
-    --open_path_conference_data ./data/conference_data \  # hyperparameter file path, user should put hyperparameter file here (Step1 output), or refer to the example data.
+    --open_path_conference_data ./reference_data \  # best hyperparameter file path, user should put best hyperparameter file here (Step1 output), or refer to the example data.
     --file_prefix scRNA-seq_panglao \  # File naming prefix
     --epoch_start_for_loss_plot_only 1 \      # Start epoch for loss visualization
     --batch_size 128 \                        # Training batch size
@@ -242,7 +242,7 @@ Step2 VAE_gf Pretraining after hyperparameter optimization
 python ./Res_VAE_pretraining/pretraining_after_hyperparameter/code/VAE_gf_Res-VAEpretraining.py \
     --open_path ./data/ \                     # Path to input features (.npy)
     --save_path_outer ./Res_VAE_retraining_after_hyperparameter/output \  # Output directory
-    --open_path_conference_data ./data/conference_data \  # hyperparameter file path, user should put hyperparameter file here (Step1 output), or refer to the example data.
+    --open_path_conference_data ./reference_data \  # best hyperparameter file path, user should put best hyperparameter file here (Step1 output), or refer to the example data.
     --file_prefix scRNA-seq_panglao \  # File naming prefix
     --epoch_start_for_loss_plot_only 1 \      # Start epoch for loss visualization
     --batch_size 128 \                        # Training batch size
@@ -253,9 +253,32 @@ Besides, default is using the last epoch fold 1 checkponit as final model for do
 
 ## Distillation VAE Pretraining (pretraining in Panglao data)
 
+Step1 Dist-VAE hyperparameter optimization
+
+The Optuna framework is similar to the VAE-sf hyperparameter optimization Step 1 code, we recommend that users directly use the optimal hyperparameter configuration file we provide.
+
+Step2 VAE_sf Pretraining after hyperparameter optimization
+
+1. **Prepare Input Data**
+   -  Place the VAE-sf model-derived latent Z representation data (`.npy` files) and the Panglao raw scRNA-seq data (`.h5ad` files) into the `--open_path`, detail for this two data please follow below instruction.
+
+2. **Run 10-fold cross-validation for model pretraining**
+Execute the following script to train the model and output the model checkpoint file (default is using the last epoch fold 1 checkponit as final model for downstream task, we have also provided pre-trained model checkpoints on Figshare):
+
+```bash
+python ./Dist_VAE/Dist_VAE_pretraining_code_and_data/pretraining_after_hyperparamater/code/Dist_VAE_pretraining.py \
+    --open_path ./data/ \                     # Path to input features (.npy), you should prepare VAE_sf_panglao_VAE_Embedding.npy and Panglao_raw_scRNA_seq.h5ad, please see figshare for detail.
+    --save_path_outer ./Res_VAE_retraining_after_hyperparameter/output \  # Output directory
+    --open_path_conference_data ./reference_data \  # best hyperparameter file path, user should put best hyperparameter file here.
+    --file_prefix scRNA-seq_panglao \  # File naming prefix
+    --epoch_start_for_loss_plot_only 1 \      # Start epoch for loss visualization
+    --batch_size 128 \                        # Training batch size
+    --REC_beta 500 \                         # Reconstruction loss weight (β)
+    --best_parameter_name Dist_VAE_best_hyperparameters.xlsx \        # hyperparameter file name
+    --VAE_sf_z_embedding_filename VAE_sf_panglao_VAE_Embedding.npy \  # VAE sf z embedding filename
+    --scfoundation_panglao_feature_filename Panglao_raw_scRNA_seq.h5ad  # scRNA-seq feature filename
 ```
-We are currently undergoing peer review, so the code related to this part has not been made available. Please contact the author if needed.
-```
+
 
 ## Transfer Learning and Model Inference 
 
