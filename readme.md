@@ -216,7 +216,7 @@ python ./Res_VAE_pretraining/pretraining_after_hyperparameter/code/VAE_sf_Res-VA
     --file_prefix scRNA-seq_panglao \  # File naming prefix
     --epoch_start_for_loss_plot_only 1 \      # Start epoch for loss visualization
     --batch_size 128 \                        # Training batch size
-    --REC_beta 1500 \                         # Reconstruction loss weight (β)
+    --REC_beta 1000 \                         # Reconstruction loss weight (β)
     --best_parameter_name VAE_sf_best_hyperparameters.xlsx        # hyperparameter file name
 ```
 
