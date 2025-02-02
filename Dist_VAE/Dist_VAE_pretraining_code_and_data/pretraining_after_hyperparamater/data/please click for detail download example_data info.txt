@@ -1,0 +1,1 @@
+VAE_sf_panglao_VAE_Embedding.npy and Panglao_raw_scRNA_seq.h5ad can download from figshare (https://figshare.com/account/articles/27908847) Panglao_embedding path
