@@ -199,6 +199,7 @@ python ./Res_VAE_pretraining/skf_pretraining/code/VAE_sf_Res-VAE_hyperparam_pret
     --save_path_outer ./Res_VAE_retraining_after_hyperparameter/output \  # Output directory,Parameter passing is unsupported; please modify directly in the script.
     --file_prefix scRNA-seq_panglao \  # File naming prefix,Parameter passing is unsupported; please modify directly in the script.
 
+After executing the above code, users can obtain the optimal hyperparameter configuration file. Additionally, we recommend that users directly use the optimal hyperparameter configuration file we provide.
 
 Step2 VAE_sf Pretraining after hyperparameter optimization
 
@@ -232,6 +233,8 @@ python ./Res_VAE_pretraining/skf_pretraining/code/VAE_gf_Res-VAE_hyperparam_pret
     --open_path ./data/ \                     # Path to input features (.npy),Parameter passing is unsupported; please modify directly in the script.
     --save_path_outer ./Res_VAE_retraining_after_hyperparameter/output \  # Output directory,Parameter passing is unsupported; please modify directly in the script.
     --file_prefix scRNA-seq_panglao \  # File naming prefix,Parameter passing is unsupported; please modify directly in the script.
+
+After executing the above code, users can obtain the optimal hyperparameter configuration file. Additionally, we recommend that users directly use the optimal hyperparameter configuration file we provide.
 
 Step2 VAE_gf Pretraining after hyperparameter optimization
 
