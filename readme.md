@@ -8,7 +8,7 @@
 - Author 2: Murong Zhou , Email: doris_zmr@sina.com
 - Author 3: Yu-Hang Yin, Email: zjyinyh@gmail.com
 
-> 🔴 **Note:** **VAE-sf corresponds to scATD-sf, VAE-gf corresponds to scATD-gf, and Dist-VAE corresponds to scATD-sf-dist, representing independent models developed under the scATD framework.**
+🔴 **Note:** **VAE-sf corresponds to scATD-sf, VAE-gf corresponds to scATD-gf, and Dist-VAE corresponds to scATD-sf-dist, representing independent models developed under the scATD framework.**
 
 
 Your contributions, feedback, and suggestions are highly appreciated. If you encounter any issues or have questions, feel free to reach out to the authors via the provided email addresses. Thank you for your interest in our work!
