@@ -8,8 +8,8 @@
 - Author 2: Murong Zhou , Email: doris_zmr@sina.com
 - Author 3: Yu-Hang Yin, Email: zjyinyh@gmail.com
 
+📌 scATD is a high-throughput and interpretable framework for single-cell drug response prediction (⚠️ in vitro cell experiment) based on pre-trained transcriptomic models combined with transfer learning. It incorporates three independently trained models: VAE-sf, VAE-gf, and Dist-VAE, based on different backbone feature extractors or knowledge distillation strategies.
 🔴 **Note:** **VAE-sf corresponds to scATD-sf, VAE-gf corresponds to scATD-gf, and Dist-VAE corresponds to scATD-sf-dist, representing independent models developed under the scATD framework.**
-
 
 Your contributions, feedback, and suggestions are highly appreciated. If you encounter any issues or have questions, feel free to reach out to the authors via the provided email addresses. Thank you for your interest in our work!
 
