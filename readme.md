@@ -292,7 +292,9 @@ python ./Dist_VAE/Dist_VAE_pretraining_code_and_data/pretraining_after_hyperpara
 
 ####   transfer learning training
 
-First, refer to the `VAE_sf/training` directory. We use the `GSE140440` dataset as an example of a target domain for domain-adaptive transfer learning, placing it inside the `./VAE_sf/inference/data/in/` directory. As the source domain, you should place the bulk dataset containing 1,280 patients—`AllbulkDEll_01B-resolution_bulk_cell_embedding_t4_resolution.npy`—and the corresponding label file—`ALL_label_binary_wf.csv`—into the `./Dist_VAE/training/data/in/` directory.
+First, refer to the `VAE_sf/training` directory. We use the `scfoundation_panglao_singlecell_cell_embedding.npy` dataset as the fixed target domain for domain-adaptive transfer learning during the bulk-to-Panglao stage. In the subsequent `Model Evaluation and Inference` phase, the direction is reversed—transferring from single-cell data to bulk data. The core of this process is a two-stage Bi-AdaIN transfer strategy. we placing `scfoundation_panglao_singlecell_cell_embedding.npy` inside the `./VAE_sf/training/target_transfer_data` directory. 
+
+As the source domain, you should place the bulk dataset containing 1,280 patients—`AllbulkDEll_01B-resolution_bulk_cell_embedding_t4_resolution.npy`—and the corresponding label file—`ALL_label_binary_wf.csv`—into the `./Dist_VAE/training/data/in/` directory.
 
 Other path configurations should follow the parameter descriptions provided below. Once the paths and dependence model file (see below) are correctly set, you can execute the code to perform Dist_VAE model domain adpative learning.
 
