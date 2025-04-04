@@ -350,15 +350,35 @@ python ./VAE_sf/training/code/VAE_sf_training.py --open_path ./VAE_sf/training/d
 
 #### Model evaluation and Inference
 
+First, refer to the `VAE_sf/inference` directory. we set `GSE140440` dataset as an example, you should place your evaluation dataset and labels (or the inference dataset) inside the `./VAE_sf/inference/data/in/` directory.
 
+Other path configurations should follow the parameter descriptions provided below. Once the paths and dependence model file (see below) are correctly set, you can execute the code to perform model evaluation or inference.
+
+🔴 **Note:** All training and inference data (including bulk data and GSE single-cell data feature and label) used in Dist_VAE are preprocessed according to the instructions provided in the *Data Preprocessing and Feature Extraction from LLM* section. The experimental 16 GSE datasets are available on Figshare.  
 
 code
 
 ```bash
-We expect to release the update around April 7
+python ./VAE_sf/inference/code/VAE_sf_inference.py --open_path ./VAE_sf/inference/data/in/ --save_path ./VAE_sf/inference/output/BI_Adain/GSE140440 --file_prefix DOCETAXEL_GSE140440_vae_sf_infer --batch_size 128 --device_choose cuda:2 --model_configuration_path ./VAE_sf/VAE_sf_pretraining_model --label_mapping "{\"sensitive\": 0, \"resistant\": 1}" --class_num 2 --drug_label_choose label --open_path_conference_data ./VAE_sf/inference/data/VAE_sf_DAL_model_path/DOCETAXEL --model_parameters_file checkpoint_fold<your_best_fold>_final_epoch_150.pth --style_alignment_file ./VAE_sf/training/data/in/AllbulkDEll_01B-resolution_bulk_cell_embedding_t4_resolution.npy --inference_only False
 ```
 
 
+- `--open_path`: Path to the single-cell GSE evaluation dataset. It should include both the feature `.npy` file and the corresponding label `.csv`/`.xlsx` file (unless in `inference_only` mode).
+- `--save_path`: Directory where the inference results will be saved, including:
+  - evaluation metrics (`*.xlsx`)
+  - prediction outputs (`*_inference_label_prob_results.xlsx`)
+  - AUC and PR curve figures (`*.pdf`)
+- `--file_prefix`: A prefix used for naming the output files in the save path. It distinguishes runs by dataset, drug, or method.
+- `--batch_size`: Batch size used during inference. Adjust according to GPU memory capacity.
+- `--device_choose`: The computing device for model inference. `"cuda:<index>"` to select a specific GPU, or `"cpu"` for CPU inference.
+- `--model_configuration_path`: Path to the pretraining model structure definition (e.g., `config.py`). This ensures compatibility when loading checkpoints.
+- `--label_mapping`: JSON-style string that maps drug response categories (e.g., `"sensitive"` and `"resistant"`) to numeric labels. Used to align labels during evaluation.
+- `--class_num`: Number of output classes for classification. For binary classification (e.g., sensitive vs. resistant), use `2`.
+- `--drug_label_choose`: Column name in the label file used as ground truth (must be indicate unless in `inference_only` mode). 
+- `--open_path_conference_data`: Path to the domain-adapted model checkpoint folder (result from transfer learning). contain the best-performing model for the selected drug (e.g., `DOCETAXEL`).
+- `--model_parameters_file`: The filename of the best checkpoint to be used for inference. You should select the best fold (e.g., highest AUC) from the training output path (`./VAE_sf/training/output/BI_Adain/DOCETAXEL/`) and place it under the path specified by `--open_path_conference_data`.
+- `--style_alignment_file`: Path to the bulk embedding `.npy` file used for feature distribution alignment during inference via the AdaIN mechanism (sc-bulk). Typically this is the same source bulk embedding used in training.
+- `--inference_only:` if only inference and not conduct evaluation. set True only conduct model inference (model deploy mode),set False conduct both model inference and evaluation (model evaluation mode). Note, when set False, `--label_mapping` must be specified, and a dataset with true labels (such as the example dataset) must be provided.
 
 
 
