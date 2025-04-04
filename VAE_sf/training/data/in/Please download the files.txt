@@ -1,0 +1,1 @@
+Please download the files AllbulkDEll_01B-resolution_bulk_cell_embedding_t4_resolution.npy and ALL_label_binary_wf.csv from the 9. LLM_bulk_embedding/scFoundation_bulk_embedding folder on Figshare, and place them here

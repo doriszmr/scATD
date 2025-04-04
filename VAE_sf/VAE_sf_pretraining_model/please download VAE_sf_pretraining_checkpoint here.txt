@@ -1,0 +1,1 @@
+Please download the files VAE_sf_checkpoint_fold1_epoch_24.pth from the 10. VAE_sf pretraining checkpoint folder on Figshare, and place it here

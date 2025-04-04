@@ -1,0 +1,1 @@
+Please download the files GSE140440_01B-resolution_singlecell_cell_embedding_a5_resolution.npy and preprocessed_GSE140440_label.h5ad from the 2.scfoundation_embedding/GSE140440 folder on Figshare, and place them here
