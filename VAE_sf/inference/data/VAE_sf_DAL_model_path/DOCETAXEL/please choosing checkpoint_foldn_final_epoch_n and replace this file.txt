@@ -1,0 +1,1 @@
+Please select the checkpoint file with the highest AUC prediction across different folds from the ./VAE_sf/training/output/BI_Adain/DOCETAXEL directory under the transfer learning training section, and place it here.
