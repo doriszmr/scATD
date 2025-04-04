@@ -12,7 +12,7 @@ import logging
 import torch.nn.init as init
 from sklearn.model_selection import KFold
 from torch.nn.utils import clip_grad_norm_
-from sklearn.cluster import DBSCAN
+
 
 open_path = '/home/luozeyu/desktop/VAE_pretraining/data/in'
 save_path_outer = '/home/luozeyu/desktop/VAE_pretraining/output/'
