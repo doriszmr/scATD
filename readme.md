@@ -338,9 +338,9 @@ python ./VAE_sf/training/code/VAE_sf_training.py --open_path ./VAE_sf/training/d
 
 `--multiplier_choose`: Strategy for setting the ratio (multiplier) of the VAE augmentation. `"auto"` lets the system adaptively adjust it during training.
 
-`--open_path_conference_data`: The input path for the target domain (e.g., single-cell GSE140440 embedding data) used in style alignment during transfer learning.
+`--open_path_conference_data`: The input path for the target domain (Panglao scfoundation embedding embedding data) used in style alignment during transfer learning.
 
-`--style_alignment_file`: The name of single-cell embedding `.npy` file used as the target domain reference for style alignment during transfer learning.
+`--style_alignment_file`: The name of Panglao scfoundation embedding `.npy` file used as the target domain reference for style alignment during transfer learning. 
 
 
 
