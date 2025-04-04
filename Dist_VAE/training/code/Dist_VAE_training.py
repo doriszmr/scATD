@@ -21,7 +21,7 @@ import re
 import json
 from sklearn.metrics import matthews_corrcoef, f1_score, recall_score, accuracy_score, precision_score, roc_curve, roc_auc_score,auc,precision_recall_curve, average_precision_score
 from itertools import cycle
-from torch.nn.utils import weight_norm,spectral_norm
+from torch.nn.utils import spectral_norm
 
 from sklearn.utils.class_weight import compute_class_weight
 from imblearn.under_sampling import TomekLinks
