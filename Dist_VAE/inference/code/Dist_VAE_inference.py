@@ -54,7 +54,6 @@ args = parser.parse_args()
 # Assign the arguments to variables
 open_path = args.open_path
 save_path = args.save_path
-model_configuration_path = args.model_configuration_path
 file_prefix = args.file_prefix
 model_inference_parameters_file = args.model_inference_parameters_file
 batch_size = args.batch_size
@@ -87,7 +86,6 @@ set_seed(seed_set)
 
 print(f"Open Path: {open_path}")
 print(f"Save Path: {save_path}")
-print(f"Open Path Conference Data: {model_configuration_path}")
 print(f"File Prefix: {file_prefix}")
 print(f"Model Parameters File: {model_inference_parameters_file}")
 print(f"Epoch Start for Loss Plot Only: {epoch_start_for_loss_plot_only}")
