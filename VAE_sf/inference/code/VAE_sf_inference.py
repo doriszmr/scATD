@@ -16,7 +16,6 @@ import matplotlib.pyplot as plt
 
 import json
 from sklearn.metrics import matthews_corrcoef, f1_score, recall_score, accuracy_score, precision_score, roc_curve, roc_auc_score,auc,precision_recall_curve, average_precision_score
-from itertools import cycle
 
 from torch.nn.utils import spectral_norm
 
