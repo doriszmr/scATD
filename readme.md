@@ -386,24 +386,24 @@ python ./VAE_sf/inference/code/VAE_sf_inference.py --open_path ./VAE_sf/inferenc
 
 ####  transfer learning training
 
-
+Similar to the `VAE_sf` transfer learning training section, this process follows a comparable path and execution logic, with necessary adjustments to account for differences in both the data and model architecture. Please refer to the files under the specified parameter directory for a detailed information.
 
 code 
 
 ```bash
-We expect to release the update around April 7
+python ./VAE_gf/training/code/VAE_gf_training.py --open_path ./VAE_sf/inference/data/in/ --save_path ./VAE_gf/training/output/BI_Adain/DOCETAXEL --file_prefix DOCETAXEL_VAE_gf_training --epoch_start_for_loss_plot_only 1 --batch_size 64 --device_choose cuda:2 --model_configuration_path ./VAE_gf/VAE_gf_pretraining_model --learning_rate 2e-5 --weight_decay 3e-3 --num_epochs 150 --label_mapping "{\"sensitive\": 0, \"resistant\": 1}" --class_num 2 --drug_label_choose DOCETAXEL --model_parameters_file_pretraining VAE_gf_checkpoint_fold1_epoch_39.pth --VAE_augmentation_used True --SMOTE_used False --multiplier_choose auto --open_path_conference_data ./VAE_gf/training/target_transfer_data --style_alignment_file geneformer_12L_panglao_singlecell_cell_embedding.npy
 ```
+The parameter settings and their corresponding meanings are similar to those in the `VAE_sf` transfer learning training section.
 
 #### Model evaluation and Inference
-
-
+Similar to the `VAE_sf` Model evaluation and Inference section, this process follows a comparable path and execution logic, with necessary adjustments to account for differences in both the data and model architecture. Please refer to the files under the specified parameter directory for a detailed information.
 
 code
 
 ```bash
-We expect to release the update around April 7
+python ./VAE_gf/inference/code/VAE_gf_inference.py --open_path ./VAE_gf/inference/data/in/ --save_path ./VAE_gf/inference/output/BI_Adain/GSE140440 --file_prefix DOCETAXEL_GSE140440_vae_gf_infer --epoch_start_for_loss_plot_only 1 --batch_size 128 --device_choose cuda:2 --model_configuration_path ./VAE_gf/VAE_gf_pretraining_model --label_mapping "{\"sensitive\": 0, \"resistant\": 1}" --class_num 2 --drug_label_choose label --open_path_conference_data ./VAE_gf/inference/data/VAE_gf_DAL_model_path/DOCETAXEL --model_parameters_file checkpoint_fold<your_best_fold>_final_epoch_150.pth --style_alignment_file ./VAE_gf/training/data/in/ALL_expression_n_counts.npy --inference_only False
 ```
-
+The parameter settings and their corresponding meanings are similar to those in the `VAE_sf` Model evaluation and Inference section.
 
 
 ### Dist_VAE (MMD)
