@@ -1,0 +1,1 @@
+Please download the files GSE140440_n_counts.npy from the 3.geneformer_embedding/12L/GSE140440 folder and preprocessed_GSE140440_label.xlsx from the 2.scfoundation_embedding/GSE140440 folder on Figshare, then place them here

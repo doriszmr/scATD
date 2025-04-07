@@ -1,0 +1,1 @@
+Please download the files ALL_expression_n_counts.npy and ALL_label_binary_wf.csv from the 9. LLM_bulk_embedding/geneformer_bulk_embedding folder on Figshare, and place them here
