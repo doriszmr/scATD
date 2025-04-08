@@ -16,7 +16,7 @@ setup(
         'pandas==2.2.2',
         'openpyxl==3.1.5',
         'optuna==3.6.1',
-        'imbalanced-learn==0.13.0'
+        'imbalanced-learn==0.12.1'
     ],
     extras_require={
         'cuda': [
@@ -29,6 +29,6 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
     ],
-    python_requires='>=3.9',  
-    packages=['VAE_gf', 'VAE_sf', 'Dist_VAE', 'survival_analysis', 'Res_VAE_pretraining', 'LLM_feature_extraction', 'feature_attribution_calculation'],
+    python_requires='>=3.9.21',  
+    packages=['VAE_gf', 'VAE_sf', 'Dist_VAE', 'Res_VAE_pretraining', 'LLM_feature_extraction'],
 )
