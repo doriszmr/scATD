@@ -12,7 +12,7 @@ setup(
         'transformers==4.44.1',
         'torch==2.2.2',
         'scikit-learn==1.4.2',
-        'numpy==1.25.1',
+        'numpy==1.26.4',
         'pandas==2.2.2',
         'openpyxl==3.1.5',
         'optuna==3.6.1',
