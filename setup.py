@@ -16,7 +16,7 @@ setup(
         'pandas==2.2.2',
         'openpyxl==3.1.5',
         'optuna==3.6.1',
-        'imbalanced-learn==0.11.1'
+        'imbalanced-learn==0.12.1'
     ],
     extras_require={
         'cuda': [
