@@ -32,7 +32,7 @@ For the environment configuration of other scATD modules
 3. Create a new Conda environment with Python version `>= 3.9`, then activate the environment:
 
 ```bash
-conda create -n scATD-env python=3.9
+conda create -n scATD-env python=3.10
 conda activate scATD-env
 ```
 
