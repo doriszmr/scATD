@@ -45,7 +45,7 @@ pip install .
   5.For CUDA Support (GPU Acceleration), install the additional dependencies required for GPU acceleration:
 
 ```bash
-pip install .[cuda]
+conda install pytorch==2.2.2 torchvision==0.17.2 torchaudio==2.2.2 -c pytorch
 ```
 
 For more detailed installation instructions and troubleshooting, please refer to the PyTorch website, which provides guides for setting up CUDA on different systems.
