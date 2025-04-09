@@ -11,7 +11,7 @@ setup(
         'seaborn==0.13.2',
         'transformers==4.44.1',
         'torch==2.2.2',
-        'scikit-learn==1.0.2',
+        'scikit-learn==1.5.1',
         'numpy==1.26.4',
         'pandas==2.2.2',
         'openpyxl==3.1.5',
