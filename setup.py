@@ -29,6 +29,6 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
     ],
-    python_requires='>=3.9.21',  
+    python_requires='>=3.10',  
     packages=['VAE_gf', 'VAE_sf', 'Dist_VAE', 'Res_VAE_pretraining', 'LLM_feature_extraction'],
 )
