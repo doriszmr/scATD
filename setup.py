@@ -11,12 +11,12 @@ setup(
         'seaborn==0.13.2',
         'transformers==4.44.1',
         'torch==2.2.2',
-        'scikit-learn==1.4.2',
+        'scikit-learn==1.5.1',
         'numpy==1.26.4',
         'pandas==2.2.2',
         'openpyxl==3.1.5',
         'optuna==3.6.1',
-        'imbalanced-learn==0.12.1'
+        'imbalanced-learn==0.13.0'
     ],
     extras_require={
         'cuda': [
