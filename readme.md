@@ -396,7 +396,7 @@ Similar to the `VAE_sf` transfer learning training section, this process follows
 code 
 
 ```bash
-python ./VAE_gf/training/code/VAE_gf_training.py --open_path ./VAE_sf/inference/data/in/ --save_path ./VAE_gf/training/output/BI_Adain/DOCETAXEL --file_prefix DOCETAXEL_VAE_gf_training --epoch_start_for_loss_plot_only 1 --batch_size 64 --device_choose cuda:2 --model_configuration_path ./VAE_gf/VAE_gf_pretraining_model --learning_rate 2e-5 --weight_decay 3e-3 --num_epochs 150 --label_mapping "{\"sensitive\": 0, \"resistant\": 1}" --class_num 2 --drug_label_choose DOCETAXEL --model_parameters_file_pretraining VAE_gf_checkpoint_fold1_epoch_39.pth --VAE_augmentation_used True --SMOTE_used False --multiplier_choose auto --open_path_conference_data ./VAE_gf/training/target_transfer_data --style_alignment_file geneformer_12L_panglao_singlecell_cell_embedding.npy
+python ./VAE_gf/training/code/VAE_gf_training.py --open_path ./VAE_gf/inference/data/in/ --save_path ./VAE_gf/training/output/BI_Adain/DOCETAXEL --file_prefix DOCETAXEL_VAE_gf_training --epoch_start_for_loss_plot_only 1 --batch_size 64 --device_choose cuda:2 --model_configuration_path ./VAE_gf/VAE_gf_pretraining_model --learning_rate 2e-5 --weight_decay 3e-3 --num_epochs 150 --label_mapping "{\"sensitive\": 0, \"resistant\": 1}" --class_num 2 --drug_label_choose DOCETAXEL --model_parameters_file_pretraining VAE_gf_checkpoint_fold1_epoch_39.pth --VAE_augmentation_used True --SMOTE_used False --multiplier_choose auto --open_path_conference_data ./VAE_gf/training/target_transfer_data --style_alignment_file geneformer_12L_panglao_singlecell_cell_embedding.npy
 ```
 The parameter settings and their corresponding meanings are similar to those in the `VAE_sf` transfer learning training section.
 
