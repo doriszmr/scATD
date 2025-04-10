@@ -42,11 +42,15 @@ conda activate scATD-env
 pip install .
 ```
 
-  5.For CUDA Support (GPU Acceleration), install the additional dependencies required for GPU acceleration:
+  5.(Optional) To enable GPU acceleration with CUDA (e.g., CUDA 12.1), please first install the necessary dependencies via Conda:
 
 ```bash
-# CUDA 12.1
 conda install pytorch==2.2.2 torchvision==0.17.2 torchaudio==2.2.2 pytorch-cuda=12.1 -c pytorch -c nvidia
+```
+After successfully installing the dependencies, install the current package with:
+
+```bash
+pip install .
 ```
 
 For more detailed installation instructions and troubleshooting, please refer to the PyTorch website, which provides guides for setting up CUDA on different systems.
