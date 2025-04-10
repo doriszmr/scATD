@@ -57,7 +57,7 @@ For more detailed installation instructions and troubleshooting, please refer to
 
 🔴 Note: To ensure the environment runs properly, you need to use an Anaconda or Miniconda environment. Both Windows and Linux support the operation of scATD. Additionally, we recommend dividing the workflow into three separate Conda environments to be used for: (1) feature extraction with scFoundation, (2) feature extraction with Geneformer, and (3) running other modules of scATD.
 
-🔴 Note: We have not yet completed the Res_VAE Pretraining section and its subsequent environment testing, so you may encounter errors due to missing Python packages. We expect to complete the environment stability tests and update around April 7. We apologize for any inconvenience caused; please feel free to contact the author for further assistance.
+🔴 Note: We have not yet completed the Res_VAE Pretraining section and its subsequent environment testing, so you may encounter errors due to missing Python packages. We expect to complete the environment stability tests and update around April 15. We apologize for any inconvenience caused; please feel free to contact the author for further assistance.
 
 ## Data Preprocessing and Feature Extraction from LLM 
 
