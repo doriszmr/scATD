@@ -310,7 +310,7 @@ Other path configurations should follow the parameter descriptions provided belo
 code 
 
 ```bash
-python ./VAE_sf/training/code/VAE_sf_training.py --open_path ./VAE_sf/training/data/in/ --save_path ./VAE_sf/training/output/BI_Adain/DOCETAXEL --file_prefix DOCETAXEL_VAE_sf_training --epoch_start_for_loss_plot_only 1 --batch_size 64 --device_choose cuda:2 --model_configuration_path ./VAE_sf/VAE_sf_pretraining_model/VAE_sf_pretraining_model --learning_rate 2e-5 --weight_decay 3e-3 --num_epochs 150 --label_mapping "{\"sensitive\": 0, \"resistant\": 1}" --class_num 2 --drug_label_choose DOCETAXEL --model_parameters_file_pretraining VAE_sf_checkpoint_fold1_epoch_24.pth --VAE_augmentation_used True --SMOTE_used False --multiplier_choose auto --open_path_conference_data ./VAE_sf/training/target_transfer_data --style_alignment_file scfoundation_panglao_singlecell_cell_embedding.npy 
+python ./VAE_sf/training/code/VAE_sf_training.py --open_path ./VAE_sf/training/data/in/ --save_path ./VAE_sf/training/output/BI_Adain/DOCETAXEL --file_prefix DOCETAXEL_VAE_sf_training --epoch_start_for_loss_plot_only 1 --batch_size 64 --device_choose cuda:2 --model_configuration_path ./VAE_sf/VAE_sf_pretraining_model --learning_rate 2e-5 --weight_decay 3e-3 --num_epochs 150 --label_mapping "{\"sensitive\": 0, \"resistant\": 1}" --class_num 2 --drug_label_choose DOCETAXEL --model_parameters_file_pretraining VAE_sf_checkpoint_fold1_epoch_24.pth --VAE_augmentation_used True --SMOTE_used False --multiplier_choose auto --open_path_conference_data ./VAE_sf/training/target_transfer_data --style_alignment_file scfoundation_panglao_singlecell_cell_embedding.npy 
 ```
 
 `--open_path`: The input path containing the source domain bulk training embeddings and corresponding label file.
