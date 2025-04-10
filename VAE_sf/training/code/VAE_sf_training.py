@@ -32,6 +32,12 @@ from imblearn.over_sampling import SMOTE
 from imblearn.pipeline import Pipeline
 
 
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+project_root = os.path.abspath(os.path.join(current_dir, '../../../'))
+
+sys.path.append(project_root)
+
 
 def strict_str2bool(v):
     if v.lower() == 'true':
@@ -153,8 +159,8 @@ if not os.path.exists(save_path):
 if path_to_add not in sys.path:
     sys.path.append(path_to_add)
 
-from VAE_sf_pretraining_model.RecResVAE import ContinuousResidualVAE
-from VAE_sf_pretraining_model.config import config
+from VAE_sf.VAE_sf_pretraining_model.RecResVAE import ContinuousResidualVAE
+from VAE_sf.VAE_sf_pretraining_model.config import config
 
 # 获取配置中的参数
 input_dim = config['input_dim']
