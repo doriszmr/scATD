@@ -406,7 +406,7 @@ Similar to the `VAE_sf` Model evaluation and Inference section, this process fol
 code
 
 ```bash
-python ./VAE_gf/inference/code/VAE_gf_inference.py --open_path ./VAE_gf/inference/data/in/ --save_path ./VAE_gf/inference/output/BI_Adain/GSE140440 --file_prefix DOCETAXEL_GSE140440_vae_gf_infer --epoch_start_for_loss_plot_only 1 --batch_size 128 --device_choose cuda:2 --model_configuration_path ./VAE_gf/VAE_gf_pretraining_model --label_mapping "{\"sensitive\": 0, \"resistant\": 1}" --class_num 2 --drug_label_choose label --open_path_conference_data ./VAE_gf/inference/data/VAE_gf_DAL_model_path/DOCETAXEL --model_parameters_file checkpoint_fold<your_best_fold>_final_epoch_150.pth --style_alignment_file ./VAE_gf/training/data/in/ALL_expression_n_counts.npy --inference_only False
+python ./VAE_gf/inference/code/VAE_gf_inference.py --open_path ./VAE_gf/inference/data/in/ --save_path ./VAE_gf/inference/output/BI_Adain/GSE140440 --file_prefix DOCETAXEL_GSE140440_vae_gf_infer --batch_size 128 --device_choose cuda:2 --model_configuration_path ./VAE_gf/VAE_gf_pretraining_model --label_mapping "{\"sensitive\": 0, \"resistant\": 1}" --class_num 2 --drug_label_choose label --open_path_conference_data ./VAE_gf/inference/data/VAE_gf_DAL_model_path/DOCETAXEL --model_parameters_file checkpoint_fold<your_best_fold>_final_epoch_150.pth --style_alignment_file ./VAE_gf/training/data/in/ALL_expression_n_counts.npy --inference_only False
 ```
 The parameter settings and their corresponding meanings are similar to those in the `VAE_sf` Model evaluation and Inference section.
 
