@@ -13,6 +13,14 @@ from itertools import cycle
 import anndata as ad
 import random
 
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+project_root = os.path.abspath(os.path.join(current_dir, '../../../'))
+
+sys.path.append(project_root)
+
+
 def strict_str2bool(v):
     if v.lower() == 'true':
         return True
@@ -101,7 +109,9 @@ if not os.path.exists(save_path):
 if path_to_add not in sys.path:
     sys.path.append(path_to_add)
 
-from distillation_VAE_pretraining_model.config import config
+
+from Dist_VAE.distillation_VAE_pretraining_model.config import config
+
 
 input_dim = config['input_dim']
 hidden_dim_layer0 = config['hidden_dim_layer0']
@@ -116,7 +126,7 @@ print(f"Using device: {device}")
 
 
 ############################################
-from distillation_VAE_pretraining_model.Dist_VAE_model_inference import Swish, VAEclassification, modelinference, modelevalution
+from Dist_VAE.distillation_VAE_pretraining_model.Dist_VAE_model_inference import Swish, VAEclassification, modelinference, modelevalution
 
 
 
