@@ -1,1 +1,1 @@
-Please download the files preprocessed_all_ALL_Bulk_Dell.h5ad and preprocessed_all_ALL_Bulk_Dell_info.xlsx from the 8. preprocessed_bulk_data folder on Figshare, and place them here
+Please download the files preprocessed_all_ALL_Bulk_Dell.h5ad from the 8. preprocessed_bulk_data folder on Figshare, and place them here
