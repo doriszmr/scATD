@@ -32,6 +32,11 @@ from imblearn.pipeline import Pipeline
 import anndata as ad
 
 
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+project_root = os.path.abspath(os.path.join(current_dir, '../../../'))
+
+sys.path.append(project_root)
 
 def strict_str2bool(v):
     if v.lower() == 'true':
@@ -161,8 +166,8 @@ if not os.path.exists(save_path):
 if path_to_add not in sys.path:
     sys.path.append(path_to_add)
 
-from distillation_VAE_version2_5.RecResVAE import ContinuousResidualVAE
-from distillation_VAE_version2_5.config import config
+from Dist_VAE.distillation_VAE_pretraining_model.RecResVAE import ContinuousResidualVAE
+from Dist_VAE.distillation_VAE_pretraining_model.config import config
 
 # 获取配置中的参数
 input_dim = config['input_dim']
