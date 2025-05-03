@@ -304,7 +304,10 @@ As the source domain, you should place the bulk dataset containing 1,280 patient
 
 Other path configurations should follow the parameter descriptions provided below. Once the paths and dependence model file (see below) are correctly set, you can execute the code to perform Dist_VAE model domain adpative learning.
 
-🔴 **Note:** All training and inference data (including bulk data and GSE single-cell data feature and label) used in Dist_VAE are preprocessed according to the instructions provided in the *Data Preprocessing and Feature Extraction from LLM* section. The experimental 16 GSE datasets are available on Figshare.  
+🔴 **Note:** All training and inference data (including bulk data and GSE single-cell data feature and label) used in VAE_sf are preprocessed according to the instructions provided in the *Data Preprocessing and Feature Extraction from LLM* section. The experimental 16 GSE datasets are available on Figshare.  
+
+🔴 **Note:** For the other datasets reported in the main text, the drugs used for model training were strictly selected based on Table 1 (in main text) to ensure consistency between the dataset and the experimental specifications. Therefore, it is essential to correctly configure the `--label_mapping` parameter and to ensure that all other relevant parameters are set appropriately.
+
 
 code 
 
@@ -358,7 +361,10 @@ First, refer to the `VAE_sf/inference` directory. we set `GSE140440` dataset as 
 
 Other path configurations should follow the parameter descriptions provided below. Once the paths and dependence model file (see below) are correctly set, you can execute the code to perform model evaluation or inference.
 
-🔴 **Note:** All training and inference data (including bulk data and GSE single-cell data feature and label) used in Dist_VAE are preprocessed according to the instructions provided in the *Data Preprocessing and Feature Extraction from LLM* section. The experimental 16 GSE datasets are available on Figshare.  
+🔴 **Note:** All training and inference data (including bulk data and GSE single-cell data feature and label) used in VAE_sf are preprocessed according to the instructions provided in the *Data Preprocessing and Feature Extraction from LLM* section. The experimental 16 GSE datasets are available on Figshare.
+
+🔴 **Note:** For the other datasets reported in the main text, the drugs used for model training were strictly selected based on Table 1 (in main text) to ensure consistency between the dataset and the experimental specifications. Therefore, it is essential to correctly configure the `--label_mapping` parameter and to ensure that all other relevant parameters are set appropriately.
+
 
 code
 
@@ -421,6 +427,9 @@ Other path configurations should follow the parameter descriptions provided belo
 
 🔴 **Note:** All training and inference data (including bulk data and GSE single-cell data gene-expression and label) used in Dist_VAE are preprocessed according to the instructions provided in the *Data Preprocessing and Feature Extraction from LLM* section, based on the outcome of `scfoundation-step2`.
 
+🔴 **Note:** For the other datasets reported in the main text, the drugs used for model training were strictly selected based on Table 1 (in main text) to ensure consistency between the dataset and the experimental specifications. Therefore, it is essential to correctly configure the `--label_mapping` parameter and to ensure that all other relevant parameters are set appropriately.
+
+
 #### Domain adpative learning code
 
 ```bash
@@ -460,6 +469,9 @@ First, refer to the `Dist_VAE/inference` directory. we set `GSE140440` dataset a
 Other path configurations should follow the parameter descriptions provided below. Once the paths and dependence model file (see below) are correctly set, you can execute the code to perform model evaluation or inference.
 
 🔴 **Note:** All training and inference data (including bulk data and GSE single-cell data gene-expression and label) used in Dist_VAE are preprocessed according to the instructions provided in the *Data Preprocessing and Feature Extraction from LLM* section, based on the outcome of `scfoundation-step2`.
+
+🔴 **Note:** For the other datasets reported in the main text, the drugs used for model training were strictly selected based on Table 1 (in main text) to ensure consistency between the dataset and the experimental specifications. Therefore, it is essential to correctly configure the `--label_mapping` parameter and to ensure that all other relevant parameters are set appropriately.
+
 
  **model inference and evalution running code**
 
