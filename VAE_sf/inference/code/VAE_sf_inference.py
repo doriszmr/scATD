@@ -63,7 +63,7 @@ parser.add_argument('--class_num', type=int, default=2, help='Number of classes.
 parser.add_argument('--drug_label_choose', type=str, default='label', help='label of classes.')
 parser.add_argument('--seed_set', type=int, default=42, help='Number of random seed.')
 parser.add_argument("--inference_only", type=strict_str2bool, default=False, help="If True, only conduct inference (no evaluation with labels).")
-
+parser.add_argument('--PP_threhold', type=float, default=0.5)
 
 # Parse the arguments
 args = parser.parse_args()
@@ -383,7 +383,7 @@ if not inference_only:
     predictions, targets = modelevalution(load_model, inference_loader)
     targets = [int(x) for x in targets]
     predictions_prob = [float(x) for x in predictions]
-    predictions_label = [1 if x > 0.5 else 0 for x in predictions_prob]
+    predictions_label = [1 if x > args.PP_threhold else 0 for x in predictions_prob]
     
     current_auc = roc_auc_score(targets, predictions_prob)
     current_mcc = matthews_corrcoef(targets, predictions_label)
@@ -445,7 +445,7 @@ if not inference_only:
 else:
     predictions = modelinference(load_model, inference_loader)
     predictions_prob = [float(x) for x in predictions]
-    predictions_label = [1 if x > 0.5 else 0 for x in predictions_prob]
+    predictions_label = [1 if x > args.PP_threhold else 0 for x in predictions_prob]
     value_to_label = {v: k for k, v in label_mapping.items()}
     mapped_predictions = [value_to_label[x] for x in predictions_label]
     prediction_df = pd.DataFrame({
