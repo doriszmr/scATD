@@ -326,21 +326,19 @@ if not args.inference_only:
     class_labels = parse_label_mapping(label_mapping)
     print("Class Labels:", class_labels)
 
-    value_to_label = {v: k for k, v in label_mapping.items()}
+    # # Save predictions with probabilities to Excel
+    # value_to_label = {v: k for k, v in label_mapping.items()}
 
-    mapped_targets = [value_to_label[x] for x in targets]
-    mapped_predictions = [value_to_label[x] for x in predictions_label]
+    # mapped_targets = [value_to_label[x] for x in targets]
+    # mapped_predictions = [value_to_label[x] for x in predictions_label]
 
+    # prediction_df = pd.DataFrame({
+    #     'True Label': targets,
+    #     'Predicted Label': mapped_predictions,
+    #     'Predicted Probability': predictions_prob
+    # })
 
-
-    prediction_df = pd.DataFrame({
-        'True Label': targets,
-        'Predicted Label': mapped_predictions,
-        'Predicted Probability': predictions_prob
-    })
-
-
-    prediction_df.to_excel(os.path.join(save_path, f'{file_prefix}_True_and_inference_label_prob_results.xlsx'), index=False)
+    # prediction_df.to_excel(os.path.join(save_path, f'{file_prefix}_True_and_inference_label_prob_results.xlsx'), index=False)
 
 else:
     predictions = modelinference(load_model, inference_loader)
