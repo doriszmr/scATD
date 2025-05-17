@@ -365,6 +365,7 @@ Other path configurations should follow the parameter descriptions provided belo
 
 🔴 **Note:** For the other datasets reported in the main text, the drugs used for model training were strictly selected based on Table 1 (in main text) to ensure consistency between the dataset and the experimental specifications. Therefore, it is essential to correctly configure the `--label_mapping` parameter and to ensure that all other relevant parameters are set appropriately.
 
+🔴 Note: For inference results (model predictions), using a fixed FDR threshold (e.g., 0.05) will affect the binary classification threshold. This differs from using a default fixed probability cutoff (experiment in our papers). For different models (across drug–dataset combinations), applying a fixed FDR or a specific FDR range will lead to different probability thresholds and thus different binary predictions. While this changes the actual model outputs, it is preferred in real-world or clinical applications where controlling the false discovery rate is crucial. Importantly, this adjustment does not affect AUROC or PR-AUC, as those are ranking-based metrics independent of any specific threshold.
 
 code
 
@@ -407,6 +408,8 @@ The parameter settings and their corresponding meanings are similar to those in 
 
 #### Model evaluation and Inference
 Similar to the `VAE_sf` Model evaluation and Inference section, this process follows a comparable path and execution logic, with necessary adjustments to account for differences in both the data and model architecture. Please refer to the files under the specified parameter directory for a detailed information.
+
+🔴 Note: For inference results (model predictions), using a fixed FDR threshold (e.g., 0.05) will affect the binary classification threshold. This differs from using a default fixed probability cutoff (experiment in our papers). For different models (across drug–dataset combinations), applying a fixed FDR or a specific FDR range will lead to different probability thresholds and thus different binary predictions. While this changes the actual model outputs, it is preferred in real-world or clinical applications where controlling the false discovery rate is crucial. Importantly, this adjustment does not affect AUROC or PR-AUC, as those are ranking-based metrics independent of any specific threshold.
 
 code
 
@@ -472,6 +475,7 @@ Other path configurations should follow the parameter descriptions provided belo
 
 🔴 **Note:** For the other datasets reported in the main text, the drugs used for model training were strictly selected based on Table 1 (in main text) to ensure consistency between the dataset and the experimental specifications. Therefore, it is essential to correctly configure the `--label_mapping` parameter and to ensure that all other relevant parameters are set appropriately.
 
+🔴 Note: For inference results (model predictions), using a fixed FDR threshold (e.g., 0.05) will affect the binary classification threshold. This differs from using a default fixed probability cutoff (experiment in our papers). For different models (across drug–dataset combinations), applying a fixed FDR or a specific FDR range will lead to different probability thresholds and thus different binary predictions. While this changes the actual model outputs, it is preferred in real-world or clinical applications where controlling the false discovery rate is crucial. Importantly, this adjustment does not affect AUROC or PR-AUC, as those are ranking-based metrics independent of any specific threshold.
 
  **model inference and evalution running code**
 
