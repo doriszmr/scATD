@@ -391,6 +391,11 @@ python ./VAE_sf/inference/code/VAE_sf_inference.py --open_path ./VAE_sf/inferenc
 - `--inference_only:` if only inference and not conduct evaluation. set True only conduct model inference (model deploy mode),set False conduct both model inference and evaluation (model evaluation mode). Note, when set False, `--label_mapping` must be specified, and a dataset with true labels (such as the example dataset) must be provided.
 
 
+🔴 Evaluation Notes: For inference results (model predictions), using a fixed FDR threshold (e.g., 0.05) will affect the binary classification threshold. This differs from using a default fixed probability cutoff (experiment in our papers, controlled by the `--PP_threshold` parameter). However, in real-world clinical applications—especially across different models (i.e., various drug–dataset combinations)—it is crucial to simultaneously fix or constrain both the true positive rate (TPR) and true negative rate (TNR) within a specific and acceptable range (see our precision–recall [PR] curves for the empirically observed trade-off boundaries in each setting).
+
+This is because, as demonstrated by the PR curve, optimizing a single metric (e.g., TPR or precision) in isolation can lead to a significant degradation in its complementary metric (e.g., TNR or recall), often to an unacceptable extent. Such trade-offs lead to different probability thresholds, thereby altering the resulting binary classification outcomes. Importantly, this adjustment does not affect AUROC or PR-AUC, as those are ranking-based metrics independent of any specific threshold.
+
+
 ### VAE_gf (BI-adain)
 
 ####  transfer learning training
@@ -415,6 +420,9 @@ python ./VAE_gf/inference/code/VAE_gf_inference.py --open_path ./VAE_gf/inferenc
 ```
 The parameter settings and their corresponding meanings are similar to those in the `VAE_sf` Model evaluation and Inference section.
 
+🔴 Evaluation Notes: For inference results (model predictions), using a fixed FDR threshold (e.g., 0.05) will affect the binary classification threshold. This differs from using a default fixed probability cutoff (experiment in our papers, controlled by the `--PP_threshold` parameter). However, in real-world clinical applications—especially across different models (i.e., various drug–dataset combinations)—it is crucial to simultaneously fix or constrain both the true positive rate (TPR) and true negative rate (TNR) within a specific and acceptable range (see our precision–recall [PR] curves for the empirically observed trade-off boundaries in each setting).
+
+This is because, as demonstrated by the PR curve, optimizing a single metric (e.g., TPR or precision) in isolation can lead to a significant degradation in its complementary metric (e.g., TNR or recall), often to an unacceptable extent. Such trade-offs lead to different probability thresholds, thereby altering the resulting binary classification outcomes. Importantly, this adjustment does not affect AUROC or PR-AUC, as those are ranking-based metrics independent of any specific threshold.
 
 ### Dist_VAE (MMD)
 
@@ -501,6 +509,9 @@ python ./Dist_VAE/inference/code/Dist_VAE_inference.py --open_path ./Dist_VAE/in
 
 `--inference_only:` if only inference and not conduct evaluation. set True only conduct model inference (model deploy mode),set False conduct both model inference and evaluation (model evaluation mode). Note, when set False, `--label_mapping` must be specified, and a dataset with true labels (such as the example dataset) must be provided.
 
+🔴 Evaluation Notes: For inference results (model predictions), using a fixed FDR threshold (e.g., 0.05) will affect the binary classification threshold. This differs from using a default fixed probability cutoff (experiment in our papers, controlled by the `--PP_threshold` parameter). However, in real-world clinical applications—especially across different models (i.e., various drug–dataset combinations)—it is crucial to simultaneously fix or constrain both the true positive rate (TPR) and true negative rate (TNR) within a specific and acceptable range (see our precision–recall [PR] curves for the empirically observed trade-off boundaries in each setting).
+
+This is because, as demonstrated by the PR curve, optimizing a single metric (e.g., TPR or precision) in isolation can lead to a significant degradation in its complementary metric (e.g., TNR or recall), often to an unacceptable extent. Such trade-offs lead to different probability thresholds, thereby altering the resulting binary classification outcomes. Importantly, this adjustment does not affect AUROC or PR-AUC, as those are ranking-based metrics independent of any specific threshold.
 
 ## Key Feature or Gene Identification 
 
