@@ -534,7 +534,8 @@ Theodoris C V, Xiao L, Chopra A, et al. Transfer learning enables predictions in
 
 ## Citation
 
-
+If our work has contributed to your research, we would greatly appreciate it if you could cite our work as follows.
+<this will relase soon>
 
 ## Acknowledgments
 
