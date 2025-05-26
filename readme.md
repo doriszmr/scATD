@@ -515,16 +515,14 @@ python ./Dist_VAE/inference/code/Dist_VAE_inference.py --open_path ./Dist_VAE/in
 ## Key Feature or Gene Identification 
 
 ```
-We are currently undergoing peer review, so the code related to this part has not been made available. Please contact the author if needed.
+Please refer to the Key Feature or Gene Identification module - feature attribution calculate instruction.md for detail.
 ```
 
 ## Comparison Experiments with Other Models
 
 ```
 IF YOU ARE NOT THE REVIEWER:
-We are currently undergoing peer review, so the experiment setting related to this part has not been made available. Please contact the author if needed.
-IF YOU ARE THE REVIEWER:
-Please see supplementary methods for details.
+We are currently undergoing publish online, so the experiment setting related to this part has not been made available. Please contact the author if needed.
 ```
 
 
