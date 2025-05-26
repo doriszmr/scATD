@@ -30,5 +30,5 @@ setup(
         'Operating System :: OS Independent',
     ],
     python_requires='>=3.10',  
-    packages=['VAE_gf', 'VAE_sf', 'Dist_VAE', 'Res_VAE_pretraining', 'LLM_feature_extraction'],
+    packages=['VAE_gf', 'VAE_sf', 'Dist_VAE', 'Res_VAE_pretraining', 'LLM_feature_extraction','Key_Feature_or_Gene_Identification'],
 )
