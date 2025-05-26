@@ -14,7 +14,7 @@
 
 🔴 **Note:** **VAE-sf corresponds to scATD-sf, VAE-gf corresponds to scATD-gf, and Dist-VAE corresponds to scATD-sf-dist, representing independent models developed under the scATD framework.**
 
-Your contributions, feedback, and suggestions are highly appreciated. If you encounter any issues or have questions, feel free to reach out to the authors via the provided email addresses. Thank you for your interest in our work!
+Your contributions, feedback, and suggestions are highly appreciated. If you encounter any issues or have questions, feel free to reach out to the author2 (Zeyu Luo, Email: [1024226968@qq.com](mailto:1024226968@qq.com)) via the provided email addresses. Thank you for your interest in our work!
 
 ## Dataset Available
 
