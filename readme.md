@@ -514,9 +514,9 @@ python ./Dist_VAE/inference/code/Dist_VAE_inference.py --open_path ./Dist_VAE/in
 
 ## Key Feature or Gene Identification 
 
-```
-Please refer to the Key Feature or Gene Identification module - feature attribution calculate instruction.md for detail.
-```
+
+Please refer to the [Key Feature or Gene Identification module](https://github.com/doriszmr/scATD/tree/master/Key_Feature_or_Gene_Identification) - feature attribution calculate instruction.md for detail.
+
 
 ## Comparison Experiments with Other Models
 
