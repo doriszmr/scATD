@@ -160,4 +160,4 @@ python ./gene_aggregation_value_conduct_IG_general_basline.py \
 
 For details in the Plot module, please refer to the code sources (`./plot/`) for interpretability and visualization of feature attribution values. 
 
-For more details on feature attribution value visualization, please refer to the *Model Interpretation* section of our previous project, (*Feature Representation for LLMs*)[https://github.com/yujuan-zhang/feature-representation-for-LLMs].
+For more details on feature attribution value visualization, please refer to the *Model Interpretation* section of our previous project, [*Feature Representation for LLMs*](https://github.com/yujuan-zhang/feature-representation-for-LLMs).
