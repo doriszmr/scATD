@@ -1,10 +1,16 @@
 TCGA_LUAD preprocess
 
 ```bash
-python ./code/data_preprocessed/data_preprocessed.py --open_path <see picture below, you can download from our figshare-TCGA_data> --save_path <your save path> --file_prefix <exp: TCGA_LUAD> --gene_ID Ensembl_ID --feature_name_to_gene <gene name file, exp: ./Key Feature or Gene Identification/reference_data/scfoundation_19264_gene_index.xlsx> --gene_shift true --gene_ENG_mapping_file mart_export.txt 
+python ./code/data_preprocessed/data_preprocessed.py --open_path <see below, you can download from our figshare-TCGA_data> --save_path <your save path> --file_prefix <exp: TCGA_LUAD> --gene_ID Ensembl_ID --feature_name_to_gene <gene name file, exp: ./Key Feature or Gene Identification/reference_data/scfoundation_19264_gene_index.xlsx> --gene_shift true --gene_ENG_mapping_file mart_export.txt 
 ```
 
-![image-20250526230806208](C:\Users\qq102\AppData\Roaming\Typora\typora-user-images\image-20250526230806208.png)
+--open_path need file below:
+
+mart_export.txt
+
+TCGA-LUAD.star_tpm.tsv
+
+TCGA-LUAD.survival.tsv
 
 after conduct above code, you can get gene conversion h5ad data <exp: TCGA_LUAD_19264_preprocessed.h5ad> and misconduct report file. 
 
