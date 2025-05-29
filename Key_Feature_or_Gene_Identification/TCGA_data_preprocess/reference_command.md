@@ -4,7 +4,7 @@ TCGA_LUAD preprocess
 python ./code/data_preprocessed/data_preprocessed.py --open_path <see below, you can download from our figshare-TCGA_data> --save_path <your save path> --file_prefix <exp: TCGA_LUAD> --gene_ID Ensembl_ID --feature_name_to_gene <gene name file, exp: ./Key Feature or Gene Identification/reference_data/scfoundation_19264_gene_index.xlsx> --gene_shift true --gene_ENG_mapping_file mart_export.txt 
 ```
 
---open_path need file below:
+--open_path need file below (example):
 
 mart_export.txt
 
