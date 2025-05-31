@@ -161,3 +161,32 @@ python ./gene_aggregation_value_conduct_IG_general_basline.py \
 For details in the Plot module, please refer to the code sources (`./plot/`) for interpretability and visualization of feature attribution values. 
 
 For more details on feature attribution value visualization, please refer to the *Model Interpretation* section of our previous project, [*Feature Representation for LLMs*](https://github.com/yujuan-zhang/feature-representation-for-LLMs).
+
+After computing the attribution values (as output in files with the suffix shap_value.csv), the following scripts are used to generate visualizations for model interpretation:
+
+1. feature_interaction_dependence_plot.py — Generates feature interaction dependence plots (Main Text, Figure 7f).
+
+2. feature_dependence_plot_scatter.py / feature_dependence_plot_histgram.py — Produce feature attribution plots, in scatter or histogram format respectively (Main Text, Figure 7b and 7d).
+
+3. feature_importance_value_scatter_plot.py — Visualizes feature importance Rank in scatter plot form (Main Text, Figure 7e, left panel).
+
+4. gene_importance_value_scatter_plot.py — Displays gene-level importance Rank in scatter plot form (Main Text, Figure 7e, right panel).
+
+5. TCGA_gene_importance_minmax_score_SHAP_force_plot.py — Generates the SHAP force plot for local interpretation (Main Text, Figure 9c).
+
+Scripts 1–4 have approximate implementations and detailed descriptions available in the *Model Interpretation* section of our previous project, [*Feature Representation for LLMs*](https://github.com/yujuan-zhang/feature-representation-for-LLMs). Script 5 generates a SHAP force plot, which is commonly used for local-level interpretability analysis. For conceptual understanding of this method, we recommend consulting both the main text and the reference materials (including books and tutorials) linked in the *Model Interpretation* section of our previous project.
+
+Important Notes:
+Each of the above visualizations scripts 1-5 requires:
+
+The feature matrix/RNA-seq gene expression matrix, which is the same as the **Feature OR Gene attribution calculation** input used for computing attribution values;
+
+The corresponding attribution values (Results of **Feature OR Gene attribution calculation**).
+
+Please ensure proper alignment between the model, input features, and the attribution values:
+
+For example, if the attribution values were computed using VAE-sf with bulk-derived scFoundation features based on Integrated Gradients (IG) methods, then the same bulk feature matrix and corresponding IG values (feature attribution value, with the suffix shap_value.csv) should be used as input for scripts 1–5.
+
+Similarly, if the attribution values were computed using Dist-VAE with TCGA RNA-seq gene expression matrix based on IG, then the same TCGA expression matrix and corresponding IG values should be used as input for scripts 1–5.
+
+The same principle is also fit to single-cell RNA-seq data. Be caution input — always ensure consistency between the feature/gene matrix and the computed attributions.
