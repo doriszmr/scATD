@@ -14,7 +14,7 @@ conda create -n myenv python=3.9
 conda activate myenv
 
 #2.install pytorch+cpu
-pip install pip install torch==1.12.1+cpu -f https://download.pytorch.org/whl/cpu/torch_stable.html
+pip install torch==1.12.1+cpu -f https://download.pytorch.org/whl/cpu/torch_stable.html
 
 #3.install captum==0.6.0
 pip install captum==0.6.0
