@@ -94,7 +94,6 @@ python ./feature_aggregation_value_conduct_IG_general_basline.py \
   --model_parameters_file <exp: checkpoint_fold<your_best_fold>_final_epoch_150.pth> \
   --feature_attribution_display_num 10 \
   --baseline_type <Please see the parameter descriptions below, exp: mean> \
-  --random_baseline_sample <! only baseline_type setting equal to random, using this parameter to control Number of random baseline samples to choose, exp: 10> \
   --shap_summary_plot_figure_size 7 7
 ```
 
@@ -150,7 +149,6 @@ python ./gene_aggregation_value_conduct_IG_general_basline.py \
   --feature_name_to_gene <gene name file, exp: ./Key Feature or Gene Identification/reference_data/scfoundation_19264_gene_index.xlsx>
   --feature_attribution_display_num 10 \
   --baseline_type <Please see the parameter descriptions below, exp: mean> \
-  --random_baseline_sample <! only baseline_type setting equal to random, using this parameter to control Number of random baseline samples to choose, exp: 10> \
   --shap_summary_plot_figure_size 7 7
 ```
 
