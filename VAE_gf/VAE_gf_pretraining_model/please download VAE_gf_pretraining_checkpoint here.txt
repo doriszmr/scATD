@@ -1,1 +1,1 @@
-Please download the files VAE_gf_checkpoint_fold1_epoch_39.pth from the 10. VAE_gf pretraining checkpoint folder on Figshare, and place it here
+Please download the files VAE_gf_checkpoint_fold1_epoch_39.pth from the 11. VAE_gf pretraining checkpoint folder on Figshare, and place it here
