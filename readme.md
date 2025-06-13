@@ -14,6 +14,8 @@
 
 🔴 **Note:** **VAE-sf corresponds to scATD-sf, VAE-gf corresponds to scATD-gf, and Dist-VAE corresponds to scATD-sf-dist, representing independent models developed under the scATD framework.**
 
+We appreciate your interest in our related work (see the *Related Works* section at the end). For example, the idea of Res-VAE reconstruction for LLM feature stems from our earlier studies. Detailed explanations and discussions on model interpretability, including statistical analysis and visualizations, can also be found in our previous projects. We will continue exploring large model applications in biology and update the *Related Works* section as new progress is made.
+
 Your contributions, feedback, and suggestions are highly appreciated. If you encounter any issues or have questions, feel free to reach out to the author2 (Zeyu Luo, Email: [1024226968@qq.com](mailto:1024226968@qq.com)) via the provided email addresses. Thank you for your interest in our work!
 
 ## Dataset Available
