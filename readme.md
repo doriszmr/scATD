@@ -545,4 +545,6 @@ We are acknowledge the contributions of the open-source community and the develo
 
 ## Related Works
 If you are interested in feature extraction and model interpretation for large language models, you may find our previous work helpful:
-- **Interpretable feature extraction and dimensionality reduction in ESM2 for protein localization prediction**: [Link](https://academic.oup.com/bib/article/25/2/bbad534/7590319?login=false); [GitHub Repository](https://github.com/yujuan-zhang/feature-representation-for-LLMs)
+- **Interpretable feature extraction and dimensionality reduction in ESM2 for protein localization prediction**: [Link](https://academic.oup.com/bib/article/25/2/bbad534/7590319?login=false); [GitHub Repository](https://github.com/yujuan-zhang/feature-representation-for-LLMs).
+
+In addition, we have recently conducted a systematic [review](https://www.sciengine.com/SCIS/doi/10.1007/s11432-024-4466-3) discussing the applications of large-scale models for DNA, RNA, and proteins in the field of biology.
