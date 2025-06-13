@@ -536,7 +536,8 @@ Theodoris C V, Xiao L, Chopra A, et al. Transfer learning enables predictions in
 ## Citation
 
 If our work has contributed to your research, we would greatly appreciate it if you could cite our work as follows.
-<this will relase soon>
+
+Murong Zhou, Zeyu Luo, Yu-Hang Yin, Qiaoming Liu, Guohua Wang, Yuming Zhao, scATD: a high-throughput and interpretable framework for single-cell cancer drug resistance prediction and biomarker identification, Briefings in Bioinformatics, Volume 26, Issue 3, May 2025, bbaf268, https://doi.org/10.1093/bib/bbaf268
 
 ## Acknowledgments
 
