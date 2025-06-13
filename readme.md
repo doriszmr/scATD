@@ -523,8 +523,7 @@ Please refer to the [Key Feature or Gene Identification module](https://github.c
 ## Comparison Experiments with Other Models
 
 ```
-IF YOU ARE NOT THE REVIEWER:
-We are currently undergoing publish online, so the experiment setting related to this part has not been made available. Please contact the author if needed.
+Please refer to the Methods section of our main paper and the accompanying supplementary materials for more details.
 ```
 
 
