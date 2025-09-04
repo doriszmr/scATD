@@ -124,6 +124,9 @@ More information please reference to https://github.com/biomap-research/scFounda
 
 
 ### geneformer
+Since the original authors update their code very frequently, the Geneformer-based data processing and feature extraction we provide here are intended for reproducing our experiment results. To fully reproduce the results reported in our paper, you will need to use the version of Geneformer that we have deposited on Figshare.
+
+In addition, because the original authors have removed the gf-12L-30M-i2048 model, we have also made this version available on Figshare to enable reproduction of our paper’s results.
 
 **Step 0:** Please follow the official open-source repository of geneformer on GitHub ([jkobject/geneformer](https://github.com/jkobject/geneformer)) to download the model source code and set up the relevant environment.  In order to respect the original author's copyright, we provide only the methods and command scripts necessary to run the model, along with essential changes to the model's execution scripts. We clearly indicate the modified scripts in the following sections. We also include a copy of the original [**Geneformer**](https://github.com/jkobject/geneformer) project, encompassing all model files, as a compressed package within our project  `.\LLM_feature_extraction\geneformer\original_geneformer_project`. No modifications have been made to any files in this copy version. We provide instructions for replacing certain raw code in Geneformer as outlined below. **Note:** After downloading or extracting `geneformer-main`, you need to replace this code **before** using `pip install` to set up the Geneformer environment.
 
